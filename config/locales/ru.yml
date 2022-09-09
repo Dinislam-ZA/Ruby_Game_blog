@@ -1,0 +1,54 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        post:
+          attributes:
+            topic:
+              required: "Темы не существует!"
+            title:
+              blank: "Заголовок не может быть пустым!"
+              too_long: "Заголовок слишком длинный!"
+            body:
+              blank: "Текст не может быть пустым!"
+        comment:
+          attributes:
+            body:
+              required: "Комментарий не может быть пустым"
+              too_short: "Краткость - сестра таланта? Нужно больше букав!"
+              too_long: "Слишком много букав, которые никто не будет читать!"
+  global:
+    topic:
+      allposts: "Все посты"
+      rpg: "Компьютерные ролевые игры"
+      sport: "Спорт"
+      simulatours: "Симуляторы"
+      strategy: "Стратегии"
+      action: "Экшен"
+      actionfps: "От первого лица"
+      actiontps: "От третьего лица"
+    commentsaccess: "Войдите в аккаунт, чтобы открыть доступ к комментариям"
+    registration: "Регистрация"
+    login: "Войти в аккаунт"
+    logout: "Выйти из аккаунта"
+    createpost: "Создать пост"
+    editpost: "Редактировать пост"
+    translate: "Перевести"
+    next: "Далее"
+    previous: "Назад"
+  post:
+    save: "Сохранить"
+    edit: "Редактировать пост"
+    read: "Читать далее"
+  deviseh:
+    password: "Пароль"
+    confirm: "Подтверждение пароля"
+    username: "Имя пользователя"
+    min: " букв минимум"
+    reg: "Зарегистрироваться"
+    log: "Логин"
+    remember: "Запомнить меня?"
+    forgot: "Забыли свой пароль?"
+
+
+

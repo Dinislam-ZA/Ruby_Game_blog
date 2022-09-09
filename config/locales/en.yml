@@ -1,0 +1,55 @@
+en:
+  activerecord:
+    errors:
+      models:
+        post:
+          attributes:
+            topic:
+              required: "topic doesn't exist!"
+            title:
+              blank: "Heading cannot be empty!"
+              too_long: "Heading is too long!"
+            body:
+              blank: "Text cannot be empty!"
+        comment:
+          attributes:
+            body:
+              required: "Comment cannot be empty!"
+              too_short: "Too short!"
+              too_long: "Too long!"
+  global:
+      topic:
+        allposts: "All posts"
+        rpg: "RPG"
+        sport: "Sport"
+        simulatours: "Simulators"
+        strategy: "Strategy"
+        action: "Action"
+        actionfps: "FPS"
+        actiontps: "TPS"
+      commentsaccess: "Log in to open access to comments"
+      registration: "Registration"
+      login: "Log in"
+      logout: "Log out"
+      createpost: "Create post"
+      editpost: "Edit post"
+      translate: "Translate"
+      next: "Далее"
+      previous: "Назад"
+  post:
+      save: "Save"
+      edit: "Edit post"
+      read: "Read more"
+  deviseh:
+      password: "Password"
+      confirm: "Password confirm"
+      username: "Username"
+      min: " characters minimum"
+      reg: "Registrate"
+      log: "Login"
+      remember: "Remember me?"
+      forgot: "Forgot your password?"
+
+
+
+

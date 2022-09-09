@@ -1,0 +1,41 @@
+
+  <!-- Blog Entries Column -->
+  <div class="col-md-8">
+
+    <h1 class="my-4">
+      <%if @topic == nil %>
+        <%= t'global.topic.allposts' %>
+      <%end %>
+    </h1>
+
+    <!-- Blog Post -->
+    <%@posts.each do |post| %>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h2 class="card-title"><%=post.title %></h2>
+        <p class="card-text"><%= post.body.length <= 2000 ? post.body : post.body[0..2000] %> </p>
+        <a href="/<%=I18n.locale%>/posts/<%=post.id %>" class="btn btn-primary"><%= t'post.read' %> &rarr;</a>
+        <%if current_user %>
+          <%if current_user.id == post.created_by %>
+            <a href="/<%=I18n.locale%>/posts/edit/<%=post.id %>" class="btn btn-primary"><%= t'post.edit' %> &rarr;</a>
+          <%end %>
+        <%end %>
+      </div>
+      <div class="card-footer text-muted">
+       <%= post.created_at %>
+      </div>
+    </div>
+      <%end %>
+
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+      <li class="page-item <% unless @has_newer %> disabled <% end %>" >
+        <a class="page-link" href="/<%=I18n.locale%>/posts/<% if @topic.present? %><%= @topic.alias %><% end %>?newer=<%= @page_token %>">&larr;<%= t'global.next' %></a>
+      </li>
+      <li class="page-item <% unless @has_older %> disabled <% end %>">
+        <a class="page-link" href="/<%=I18n.locale%>/posts/<% if @topic.present? %><%= @topic.alias %><% end %>?older=<%= @page_token %>"><%= t'global.previous' %> &rarr;</a>
+      </li>
+    </ul>
+
+  </div>
